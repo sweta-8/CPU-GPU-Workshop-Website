@@ -436,14 +436,16 @@ ul li {
 /* 
  * 6.6 Section: Schedule
  */
-.schedule-box {
+ .schedule-box {
   position: relative;
   background-color: #0c011c;
   color: #fff;
   text-align: center;
   padding: 20px 0;
   margin: 25px 0 0;
+  pointer-events: auto; /* Ensures links are clickable */
 }
+
 .schedule-box::before {
   content: '';
   position: absolute;
@@ -452,7 +454,9 @@ ul li {
   bottom: 5px;
   left: 5px;
   border: 1px solid #fff;
+  pointer-events: none; /* Prevents the ::before element from blocking clicks */
 }
+
 
 
 
